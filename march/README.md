@@ -1,5 +1,28 @@
 # March
 
+### Week 2, 03/07/16
+
+More from the YDKJS series, more on objects (Chapter 3)
+
+Two ways to declared objects:
+
+```
+//literal form
+var obj = {
+	key: value
+	//..
+};
+
+//using new
+var obj = new Object();
+obj.key = value
+```
+
+* Not everything is an object, object is one of the six primitive types in JS (string, number, boolean, null, undefined and object).
+* Object properties can be configured through property descriptors, **writable, enumerable and configurable**
+* Property mutability can be controlled with methods, `preventExtensions(), seal() and freeze()`
+* Can iterate over values of data structures with `for..of` syntax
+
 ### Week 1, 03/01/16
 
 From the You-Don't-Know-JS series, the 4 rules used to find what object **this** is bound to.
@@ -34,9 +57,5 @@ foo.call(obj); //tell the func foo to bind this to obj
 ## References
 
 * https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md
-
-
-
-
 
 
