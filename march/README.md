@@ -2,11 +2,13 @@
 
 ### Week 2, 03/07/16
 
+#### Javascript
+
 More from the YDKJS series, more on objects (Chapter 3)
 
 Two ways to declared objects:
 
-```
+```javascript
 //literal form
 var obj = {
 	key: value
@@ -22,6 +24,28 @@ obj.key = value
 * Object properties can be configured through property descriptors, **writable, enumerable and configurable**
 * Property mutability can be controlled with methods, `preventExtensions(), seal() and freeze()`
 * Can iterate over values of data structures with `for..of` syntax
+
+#### Bootstrap
+
+Have been messing a lot with Bootstrap lately to get some robust pages up fast.
+
+Most of the designs have consisted of:
+
+```html
+<div class="container">
+	<!--some header-->
+
+	<div class="row">
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+		<div class="col-md-4"></div>
+	</div>
+
+	<!--some footer-->
+</div>
+```
+
+Outer `div` with container class for responsiveness, and most of the content goes in a `div` with row class that subsequently have several other `div` with column classes. Lost in `divs`
 
 ### Week 1, 03/01/16
 
