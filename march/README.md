@@ -1,5 +1,45 @@
 # March
 
+### Week 3, 03/14/16 
+
+#### Javascript
+
+A little brush up on what `new` does in JS, since I just found out what `prototype` is. When `new` is called with a function 4 things happend:
+
+* new object, object is prototype linked to the functionName.prototype, object is set as `this` for that function call and this new object is returned
+
+```javascript
+
+//type this in your browser console to test things out
+//a good ol function
+function Foo(){
+	console.log("hello from the console");
+}
+
+var a = new Foo(); //"hello from the console"
+
+//based on the small definition above, this new object is prototype-linked to Foo.prototype
+
+Foo.prototype //just an object
+Foo.prototype.name = "dummy name";
+
+a.name //"dummy name", traversing the prototype chain it finds name on Foo.prototype
+a.name = "dan" //created a name property for a itself
+
+Foo.prototype.name //"dummy name"
+a.name //"dan"
+
+```
+
+No classes in JS, only linked objects, when a property is not found in `a` it does a lookup on its prototype chain. No hard copying of the objects properties like in languages that have a class design pattern.
+
+
+## References
+
+* https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/ch5.md
+* https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/ch2.md
+
+
 ### Week 2, 03/07/16
 
 #### Javascript
