@@ -33,6 +33,28 @@ a.name //"dan"
 
 No classes in JS, only linked objects, when a property is not found in `a` it does a lookup on its prototype chain. No hard copying of the objects properties like in languages that have a class design pattern.
 
+#### From solving Free Code Camp algorithms, 03/18/16
+
+Problem was to find the symmetric difference of x amount of sets, my initial solution was super long and I knew there had to a better and shorter way of doing things. The shorter solution using ES6 features is here, https://gist.github.com/danielcodes/3e8c5e25d84cdab99664. Main takeaways were turning the arguments object into an array, a bit of practice with 'fat arrow' notation, using the sets to create containers of unique values and some practice with the spread operator.
+
+```javascript
+//a function's passed can be accessed through the arguments object which is array-like
+var args = Array.prototype.slice.call(arguments) //or [...arguments]
+
+//the fat arrow replaces the need to use function keyword
+//pretty fun to use
+var addNumbers = (x, y) => (x + y);
+
+//sets have unique values
+var list = [1,1,4,4,5,6];
+var blah = new Set(list); //Set {1, 4, 5, 6}
+
+//the spread operator, has Python's **kwargs feel for argument unpacking
+var list = [1, 3, 5, 6];
+Math.max(...list); //6
+
+```
+
 
 ## References
 
