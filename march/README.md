@@ -55,11 +55,43 @@ Math.max(...list); //6
 
 ```
 
+#### Git
+
+While pushing the bit I learned on Js `new` and `prototype`, the commit pushed had a typo. From here, I could have pushed another commit up to fix the typo but I opted to `squash` this commit into one.
+
+I first needed a way to remove the latest pushed commit, this was done with:
+
+`git push -f origin HEAD^:master`
+
+I then followed the tutorial referenced below, and managed to squash the commit in 2 simple steps:
+
+```sh
+# since I wanted to modify the last 2 commits
+git rebase -i HEAD~2
+
+# another screen pops up
+pick 01d1124 "some commit msg"
+pick 6340aaa "some commit msg"
+
+# change 'pick' to squash to meld to commit into one
+pick 01d1124 "some commit msg"
+squash 6340aaa "some commit msg"
+
+# save and exit, done.
+```
+
+Funny enough, I couldn't completely get rid of the commit, as once it was pushed up to GitHub, it saved it's hash reference. So, even though, I rewritten Git history, the commits are stll visible.
+
 
 ## References
 
+#### JS stuff
 * https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/ch5.md
 * https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/ch2.md
+
+#### Git stuff
+* http://stackoverflow.com/questions/448919/how-can-i-remove-a-commit-on-github
+* http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html
 
 
 ### Week 2, 03/07/16
