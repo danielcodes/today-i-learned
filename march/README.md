@@ -83,6 +83,22 @@ squash 6340aaa "some commit msg"
 Funny enough, I couldn't completely get rid of the commit, as once it was pushed up to GitHub, it saved it's hash reference. So, even though, I rewritten Git history, the commits are stll visible.
 
 
+#### Functional Programming for JS
+
+I have been intrigued by functional programming as of lately and been putting off reading thim Medium piece on it (referenced below). 
+
+Some takeaways:
+
+* _Pure functions_, this function is solely dependent on input
+* _Function composition_, define a compose function that takes two functions and combine them together (process from rightmost function first). Alternatively, a pipe utility can be defined, to process things from left -> right.
+* _Function currying_, creates a function that has partial arguments. ie. an add function that takes two arguments, currying can create an add function with a locked-in argument, `add5(a)` which takes the remaining argument
+* _Monads, functors and fancy words_, monads are containers for values, transform them with `map`
+* _Referential transparency and immutability_, two things that are the same but aren't equal (wut?)
+* _Lazy evaluation_, thunks and generators, as the name says, do not perform an action unless told to. Outtermost reduction with reference sharing, whatever that means
+* Clojure patterns and features, data focused, lisp? lost.
+
+Conclusion, explore Lodash
+
 ## References
 
 #### JS stuff
@@ -92,6 +108,9 @@ Funny enough, I couldn't completely get rid of the commit, as once it was pushed
 #### Git stuff
 * http://stackoverflow.com/questions/448919/how-can-i-remove-a-commit-on-github
 * http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html
+
+#### Functional Programming for JS
+* https://medium.com/@chetcorcos/functional-programming-for-javascript-people-1915d8775504#.v8v5c3q0f
 
 
 ### Week 2, 03/07/16
