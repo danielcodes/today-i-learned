@@ -1,5 +1,40 @@
 # March
 
+### Week 4, 03/21/16
+
+#### Javascript
+
+The built-in `Array.prototype.sort()`, I use it from time to time and everytime I have to look up the documentation because I can never remember what it does. The function takes one argument, a compares function, if nothing is passed it turns the elemnts into strings and compares their unicode values. If a compare function is passed, it evaluates in the following manner:
+
+Say, `Compare(a, b)`:
+* negative, places `a` before `b`
+* zero, leave unchanged
+* positive, `b` is placed before `a`
+
+```javascript
+
+//a typical use case, sort in ascending order
+[4, 3, 2, 1].sort(function(a, b){
+  console.log("comparing a ", a, " with b ", b);
+  return a-b;
+})
+
+/*
+comparing a  4  with  3
+comparing a  4  with  2
+comparing a  3  with  2
+comparing a  4  with  1
+comparing a  3  with  1
+comparing a  2  with  1
+[1, 2, 3, 4]
+*/
+
+```
+
+This takes a little time to sink in, because you have to think in terms of the return value (-, 0, +). 
+ie. 4 - 3 gives 1 and so a positive value means b is placed before a, so it sorts `3, 4`
+
+
 ### Week 3, 03/14/16 
 
 #### Javascript
