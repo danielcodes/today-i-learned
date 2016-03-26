@@ -34,6 +34,11 @@ comparing a  2  with  1
 This takes a little time to sink in, because you have to think in terms of the return value (-, 0, +). 
 ie. 4 - 3 gives 1 and so a positive value means b is placed before a, so it sorts `3, 4`
 
+#### You done goofed up
+
+* Always use `target="_blank"` when creating links on codepens, painfully found out about this when the twitter button that I needed to create was giving me some weird frame bug
+* Don't forget to add the `http://` when testing API's on hurl.it
+
 
 ### Week 3, 03/14/16 
 
