@@ -34,6 +34,34 @@ comparing a  2  with  1
 This takes a little time to sink in, because you have to think in terms of the return value (-, 0, +). 
 ie. 4 - 3 gives 1 and so a positive value means b is placed before a, so it sorts `3, 4`
 
+#### Finding location through the browser
+
+Read up on the `geolocation` object, https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation 
+
+The example is pretty clear:
+
+```javascript
+//if geolocation object is not present, exit early
+if (!navigator.geolocation){
+  //write some message
+  return;
+}
+
+function success(position) {
+  var latitude  = position.coords.latitude;
+  var longitude = position.coords.longitude;
+
+  //do something, my usage is going to be for an API call
+};
+
+function error() {
+  //error handling
+};
+
+//make the function call
+navigator.geolocation.getCurrentPosition(success, error);
+```
+
 #### You done goofed up
 
 * Always use `target="_blank"` when creating links on codepens, painfully found out about this when the twitter button that I needed to create was giving me some weird frame bug
