@@ -1,5 +1,14 @@
 # March
 
+### Week 5, 03/28/16
+
+#### You done goofed up
+
+* While playing with Postman, I couldn't seem pass parameters to my API call. What confused me was that the header tab also has the same key-value pair interface as the parameters. Gah, wasted so much time.
+
+![Postman parameters](/img/postman_params.png)
+
+
 ### Week 4, 03/21/16
 
 #### Javascript
