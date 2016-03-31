@@ -2,6 +2,25 @@
 
 ### Week 5, 03/28/16
 
+#### Read the docs
+
+Painfully sifting through the Wikipedia APi for a Free Code Camp project, currently having difficulty finding relevancy to searches.
+
+The basics:
+
+* Hit this endpoint, `https://en.wikipedia.org/w/api.php`
+* parameters that I've used so far are `action=query, titles=pages-to-search, format=json'`, this returns an object which has a pageid
+* To get to that wikipedia page, `https://en.wikipedia.org/?curid=ID-FROM-QUERY`
+
+From here it's easy to look for a page and based on the found ID, return the wiki page on that topic.
+
+Things get hairier when trying to find relevant links based on that query, passing `prop=links` returns a set of internal links residing in the page but no ID, to get those add `generator=links`. Found this here, http://stackoverflow.com/questions/18432650/how-to-get-all-linksid-of-specific-page-in-wikipedia-by-pageid
+
+Sometimes links in a page arent't good enough and can contain unimportant references to page, try getting the pages that contain the query title, use `list=backlinks` which will require to provide a `btitle`
+
+The results are not quite as relevant as I want them to be, so will keep working on this.
+
+
 #### You done goofed up
 
 * While playing with Postman, I couldn't seem pass parameters to my API call. What confused me was that the header tab also has the same key-value pair interface as the parameters. Gah, wasted so much time.
