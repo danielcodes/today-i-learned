@@ -32,14 +32,36 @@ var arr = Array.prototype.slice.call( arguments );
 
 //ES6 solution
 var arr = Array.from( arguments );
-
-
 ```
 
+* Special numbers, NaN and -0
+
+```javascript
+//NaN is a number computation that went wrong
+var a = 3 / "hi"; // NaN
+
+//NaN is not equal to itselt, wut?
+a === NaN //false
+
+//to test for NaN, use ES6 feature or polyfill
+Number.isNaN( a ); // true
 
 
+//+0 and -0 are two different values
+//not common, but used in applications where the sign indicates something (ie. direction)
 
+var a = 0 / -3; // -0
 
+//to test for it, hard check against 0 and use it in an operation to get -Infinity
+a === 0 && 1/a === -Infinity
+
+//ES6 has a utility for these special cases, Object.is()
+var a = 3 / "hi"; // NaN
+var b = 4 * -0; // -0
+
+Object.is(a, NaN); // true
+Object.is(b, -0); // true
+```
 
 #### Read the docs
 
