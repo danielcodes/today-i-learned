@@ -2,6 +2,45 @@
 
 ### Week 5, 03/28/16
 
+#### Javascript
+
+Started reading the 4th book from the YDKJS series, [Types & Grammar](https://github.com/getify/You-Dont-Know-JS/tree/master/types%20%26%20grammar)
+
+Some things that stood out,
+
+* undefined vs. undeclared, undefined is a value (in scope), undeclared means the variable has yet to be created (not in scope)
+
+```javascript
+//in console
+var b;
+
+b // undefined
+c // ReferenceError
+```
+
+* converting array-like values to actual array
+
+```javascript
+//previously had this problem before so it's not that new
+//but it's pretty good information
+
+//the arguments object of a function is array-like
+//two ways to do it
+
+//use the slice method from Array.prototype
+var arr = Array.prototype.slice.call( arguments );
+
+//ES6 solution
+var arr = Array.from( arguments );
+
+
+```
+
+
+
+
+
+
 #### Read the docs
 
 Painfully sifting through the Wikipedia APi for a Free Code Camp project, currently having difficulty finding relevancy to searches.
