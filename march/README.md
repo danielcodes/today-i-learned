@@ -2,6 +2,40 @@
 
 ### Week 5, 03/28/16
 
+#### New things
+
+I have been eyeing go for a while now, ever I noticed that some people were having problems (handling massive requests) with NodeJS and Go became their solution. That being said, I was focused on sharpening my Python and Javascript (which I still am) but I have finally decided to give it a shot.
+
+I started with the [Tour of Go](https://tour.golang.org/welcome/1), found on their main site.
+
+Things that I've noticed thus far,
+
+```go
+//variable declarations
+//they can be statically typed or using the := operator
+
+//use of var and placing the type at the end, which I have yet to get used to
+var a_number int
+
+//if you know you want to initialize the variable, just use :=, this has a dynamic feel to it
+name := "Daniel Chia"
+
+//for loops seem pretty similar to the ones found in C, though for 'while' you use for, wut
+
+//there are pointers, which I haven't touched in VERY long time
+number := 19
+pointer := &number //the address of number
+
+//deference the pointer, get the value at that address
+*pointer //19
+
+//still working on the tutorial
+
+```
+
+What I am looking forward to the most is the bit on concurrency :)
+
+
 #### Javascript
 
 Started reading the 4th book from the YDKJS series, [Types & Grammar](https://github.com/getify/You-Dont-Know-JS/tree/master/types%20%26%20grammar)
