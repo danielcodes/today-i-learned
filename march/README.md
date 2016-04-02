@@ -97,6 +97,32 @@ Object.is(a, NaN); // true
 Object.is(b, -0); // true
 ```
 
+Learned about how values are treated in terms of value vs. reference. Check it here, https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch2.md#value-vs-reference
+
+In essense, variables hold references to values. Primitive types are copied while complex types are not.
+
+```javascript
+//try it in browser console
+//primitives
+a = 3;
+b = a; // the value of 3 is copied
+
+b++;
+
+a // 3
+b // 4
+
+//complex
+a = [1, 2, 3];
+b = a; // b and a are both references to the array
+
+//doing modifications through either reference modies the shared value
+b.push(4)
+
+a // [1, 2, 3, 4]
+b // [1, 2, 3, 4]
+```
+
 #### Read the docs
 
 Painfully sifting through the Wikipedia APi for a Free Code Camp project, currently having difficulty finding relevancy to searches.
