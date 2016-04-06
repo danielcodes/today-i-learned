@@ -2,6 +2,10 @@
 
 ### Week 1, 04/04/2016
 
+#### Golang
+
+Finally downloaded Go (1.6), and went through this tutorial https://golang.org/doc/code.html to set up my GOPATH and get a feel for project structure.
+
 #### Flask-SQLAlchemy
 
 I had been meaning to finish my little CRUD flask app for a while now, and am always forgetting these procedural steps to create objects.
