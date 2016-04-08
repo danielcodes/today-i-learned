@@ -29,4 +29,11 @@ Javascript literals are implicitly wrapped in objects a thus methods can be call
 
 Sparse arrays are dangerous to work with, avoid.
 
+Falsy values in javascript, it is easier to check when things are falsy than truthy (longer and possibily infinite list)
+
+```javascript
+//there 6 of them
+undefined, null, false, 0, NaN and ""
+```
+
 
