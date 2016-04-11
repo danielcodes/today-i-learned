@@ -1,5 +1,43 @@
 # April
 
+### Week 2, 04/11/2016
+
+#### Javascript
+
+Diving into Chapter 4: Coercion, https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch4.md
+
+Lots of interesting bit between explicit and implicit coercion,
+
+```javascript
+
+//To explicitly convert to any of the primitives, wrap values in their native functions
+Number(value), String(value), Boolean(value)
+
+//to boolean, use double !!, one changes to boolean but also flips the truthy/falsy value, need 2 to retain it
+a = 4;
+!4 // false
+!!4 // true
+
+//Implictly
+//number to string
+a = 45;
+b = a + ""; // now a string
+
+//string to number
+a = "67"
+b = a - 0; // apply the - operator
+```
+
+Also found out that `||` and `&&` are a lie, the values these two return are according to a boolean test on the first operand. Based on the result an operand is returned, not necesarily a boolean.
+
+Lastly, learned the truth about `==` vs. `===`, which is comparison with and without coercion. 
+
+```javascript
+"42" == true // false
+
+// boolean true is first turned to a number 1, then "42" is turned to 42 and voila 42 == 1 is false
+```
+
 ### Week 1, 04/04/2016
 
 #### Golang
