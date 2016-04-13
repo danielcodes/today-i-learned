@@ -38,6 +38,24 @@ Lastly, learned the truth about `==` vs. `===`, which is comparison with and wit
 // boolean true is first turned to a number 1, then "42" is turned to 42 and voila 42 == 1 is false
 ```
 
+The final tally of the crazy stuff that can arise from coersion,
+
+```javascript
+//a list of 7, this all returns true
+
+"0" == false
+false == 0
+false == ""
+false == []
+
+"" == 0
+"" == []
+0 == []
+```
+
+* How to avoid getting bitten, do not use loose equals (==) for `false` or `true` (these are coerced to 1 or 0 respectively)
+* If using `"", 0 or []` as comparison operands, reconsider loose equals
+
 ### Week 1, 04/04/2016
 
 #### Golang
