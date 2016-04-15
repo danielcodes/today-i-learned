@@ -2,6 +2,25 @@
 
 ### Week 2, 04/11/2016
 
+#### Flask
+
+Started playing with Flask's file upload, implemented the 'hello world' version provided in the docs http://flask.pocoo.org/docs/0.10/patterns/fileuploads/. I did run into a couple of issues:
+
+```python
+# this did not not work for me when I passed '/uploads'
+UPLOAD_FOLDER = '/path/to/the/uploads'
+
+#instead I had to use this
+UPLOAD_FOLDER = './uploads'
+
+# once the file was uploaded and in the filesystem I needed a way to retrieve it and so I made placed the the upload folder in /static
+UPLOAD_FOLDER = './static/uploads/'
+
+# now, the db will save the name and to retrieve is just string concatenation
+```
+
+The gist is here, https://gist.github.com/danielcodes/4c3feb1c10d6aed009bdfecdbf268952
+
 #### Javascript
 
 Diving into Chapter 4: Coercion, https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch4.md
