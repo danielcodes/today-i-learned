@@ -1,5 +1,18 @@
 # April
 
+### Week 3, 04/18/2016
+
+#### Javascript
+
+Going through chapter 5 of YDKJS - Types and Grammar, https://github.com/getify/You-Dont-Know-JS/blob/master/types%20%26%20grammar/ch5.md
+
+Learned a bit about operator precedence
+
+```javascript
+//&& takes first precedence, || second and ? : third
+//ternary operands are grouped from right to left
+```
+
 ### Week 2, 04/11/2016
 
 #### Flask
