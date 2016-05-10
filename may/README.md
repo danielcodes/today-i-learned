@@ -1,5 +1,14 @@
 # May
 
+### Week 2, 05/09/2016
+
+Started Chapter 2, callbacks.
+
+Our brain thinks of events in a linear manner, async code are subactions within these events, they occure after.
+
+The real problem with callbacks is that when using them, third party code might use in an incorrect manner (there is a list of issues). IE. a callback to process payment data can be called multiple times and thus overcharge the customer, etc (other misuses). This leads to a lot of hacky code for error handling.
+
+
 ### Week 1, 05/02/2016
 
 Finally started the Async and performance book fron YDKJS
